@@ -26,7 +26,7 @@ jobs:
         run: docker build . -t eu.gcr.io/digdir-fdk-infra/fdk-nginx-enhetsregisteret-proxy:$GITHUB_SHA -t eu.gcr.io/digdir-fdk-infra/fdk-nginx-enhetsregisteret-proxy:latest
 
       - name: Publish docker image to Google Cloud
-        run: docker -- push eu.gcr.io/digdir-fdk-infra/fdk-nginx-enhetsregisteret-proxy
+        run: docker -- push eu.gcr.io/digdir-fdk-infra/fdk-nginx-enhetsregisteret-proxy -a
 
       - name: Apply Helm template
         run: |
